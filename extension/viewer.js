@@ -4,7 +4,9 @@ const fileInput = document.getElementById("file-input");
 const viewer = document.getElementById("viewer");
 const status = document.getElementById("status");
 
-pdfjsLib.GlobalWorkerOptions.workerSrc = "./vendor/pdfjs/pdf.worker.mjs";
+pdfjsLib.GlobalWorkerOptions.workerSrc = chrome.runtime.getURL(
+  "vendor/pdfjs/pdf.worker.mjs"
+);
 
 function resetViewer() {
   viewer.innerHTML = "";
