@@ -1,4 +1,5 @@
 import * as pdfjsLib from "./vendor/pdfjs/pdf.mjs";
+import { TextLayerBuilder } from "./vendor/pdfjs/pdf_viewer.mjs";
 
 const fileInput = document.getElementById("file-input");
 const viewer = document.getElementById("viewer");
@@ -28,21 +29,13 @@ async function renderPage(pdf, pageNumber) {
 
   pageContainer.appendChild(canvas);
 
-  const textLayer = document.createElement("div");
-  textLayer.className = "textLayer";
-  pageContainer.appendChild(textLayer);
-
   viewer.appendChild(pageContainer);
 
   await page.render({ canvasContext: context, viewport }).promise;
-  const textContent = await page.getTextContent();
 
-  await pdfjsLib.renderTextLayer({
-    textContent,
-    container: textLayer,
-    viewport,
-    textDivs: []
-  });
+  const textLayerBuilder = new TextLayerBuilder({ pdfPage: page });
+  await textLayerBuilder.render({ viewport });
+  pageContainer.appendChild(textLayerBuilder.div);
 }
 
 async function renderPdf(arrayBuffer) {
