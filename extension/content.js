@@ -163,8 +163,22 @@
       const spaced = pinyinArray.join(" ");
       const initials = pinyinArray.map((p) => p[0] || "").join("");
       const spacedInitials = pinyinArray.map((p) => p[0] || "").join(" ");
+      const reversed = [...pinyinArray].reverse();
+      const reversedFull = reversed.join("");
+      const reversedSpaced = reversed.join(" ");
+      const reversedInitials = reversed.map((p) => p[0] || "").join("");
+      const reversedSpacedInitials = reversed.map((p) => p[0] || "").join(" ");
 
-      const rawKeys = [full, spaced, initials, spacedInitials].filter(Boolean);
+      const rawKeys = [
+        full,
+        spaced,
+        initials,
+        spacedInitials,
+        reversedFull,
+        reversedSpaced,
+        reversedInitials,
+        reversedSpacedInitials
+      ].filter(Boolean);
       const keySet = new Set();
       rawKeys.forEach((key) => {
         expandUmlaut(key).forEach((item) => keySet.add(item.toLowerCase()));

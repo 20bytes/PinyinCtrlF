@@ -1,26 +1,56 @@
 # 🔎 PinyinCtrlF
 
-> Type pinyin, jump to the right Chinese name — a Ctrl+F for Chinese name matching.
+> 用拼音/英文名快速定位中文姓名的“智能 Ctrl+F”，面向网页与可复制文本 PDF。
 
-## ✨ What it does
-- ⚡ Input pinyin / initials to search Chinese names
-- 🎯 Rank the most likely matches and highlight them on the page
-- 🌐 Works on web pages (basic PDF text layer support)
-- 🔐 Fully local — no upload, no server
+---
 
-## ⌨️ Shortcut
-- `Ctrl + Shift + F` to open PinyinCtrlF (can't override native Ctrl+F)
+## 🎯 项目目的
+在核对名单、论文作者、导师列表时，英文名/拼音与中文姓名常常不一致。  
+PinyinCtrlF 让你像 Ctrl+F 一样用拼音/首字母搜索，并自动跳到最可能的中文姓名。
 
-## 🧩 Install (dev)
-1. Open Chrome → `chrome://extensions`
-2. Enable **Developer mode**
-3. Click **Load unpacked** → select `extension/`
+---
 
-## 🗺️ Roadmap
-- [ ] Better Chinese name candidate extraction
-- [ ] Improve PDF.js text-layer accuracy for split characters
-- [ ] Fuzzy ranking (pinyin / initials / reorder)
-- [ ] Options UI & allowlist domains
+## ✨ 功能特点
+- ⚡ **拼音/首字母搜索**：输入 `zhangsan` 或 `zs` 即可匹配“张三”
+- 🔁 **支持倒序姓名**：`jian zhao` 也能匹配“赵建”
+- 🎯 **结果排序 + 高亮跳转**：一键定位并高亮
+- 🌐 **网页 + PDF 文本层**：浏览器打开的可复制 PDF 同样可用
+- 🔐 **本地运行**：不上传、不联网
+
+---
+
+## ⌨️ 使用方式
+- 快捷键：`Ctrl + Shift + F` 打开搜索框  
+- 输入拼音/首字母 → 点击结果 → 页面自动高亮并跳转
+
+---
+
+## 🧩 开发者安装（本地加载）
+1. 打开 Chrome/Edge → `chrome://extensions`
+2. 开启 **开发者模式**
+3. 点击 **加载已解压的扩展程序** → 选择 `extension/`
+
+---
+
+## 📌 适用场景
+- 论文作者姓名（拼音/英文） ↔ 中文姓名匹配
+- 学校/机构导师名单快速核对
+- 人员名单、表格、网页名录快速定位
+
+---
+
+## ⚠️ 注意事项
+- 扫描件 PDF（不可复制）暂不支持，需要 OCR
+- 过于稀有或多音字会影响匹配准确度（后续会优化）
+
+---
+
+## 🗺️ 规划中
+- [ ] 更准确的人名候选抽取
+- [ ] PDF 文本层切分优化
+- [ ] 匹配解释与可配置规则
+
+---
 
 ## License
 MIT
