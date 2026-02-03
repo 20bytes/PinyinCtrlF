@@ -21,6 +21,9 @@ async function renderPage(pdf, pageNumber) {
   pageContainer.className = "page";
   pageContainer.style.width = `${viewport.width}px`;
   pageContainer.style.height = `${viewport.height}px`;
+  pageContainer.style.setProperty("--scale-factor", viewport.scale);
+  pageContainer.style.setProperty("--user-unit", 1);
+  pageContainer.style.setProperty("--total-scale-factor", viewport.scale);
 
   const canvas = document.createElement("canvas");
   const context = canvas.getContext("2d");
@@ -35,6 +38,8 @@ async function renderPage(pdf, pageNumber) {
 
   const textLayerBuilder = new TextLayerBuilder({ pdfPage: page });
   await textLayerBuilder.render({ viewport });
+  textLayerBuilder.div.style.width = `${viewport.width}px`;
+  textLayerBuilder.div.style.height = `${viewport.height}px`;
   pageContainer.appendChild(textLayerBuilder.div);
 }
 
