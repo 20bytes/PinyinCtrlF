@@ -28,10 +28,10 @@ PinyinCtrlF 让你像 Ctrl+F 一样用拼音/首字母搜索，并自动跳到�
 
 ## 📄 本地 PDF（推荐方式）
 Chrome 内置 PDF 阅读器是 `chrome-extension://` 页面，扩展无法注入。  
-请用项目自带的 `viewer.html` 打开本地 PDF：
+请使用扩展自带的 PDF 查看器（不需要本地服务器）：
 
-1. 先在扩展详情里开启 **“允许访问文件网址”**  
-2. 用浏览器打开 `extension/viewer.html`（本地文件）  
+1. 点击浏览器工具栏里的 **PinyinCtrlF 图标**  
+2. 会打开 `PinyinCtrlF PDF Viewer` 标签页  
 3. 在页面里选择 PDF  
 4. `Ctrl + Shift + F` 搜索拼音
 

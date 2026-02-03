@@ -3,6 +3,12 @@
   "name": "PinyinCtrlF",
   "version": "0.0.1",
   "description": "Ctrl+F for Chinese name matching with pinyin/initials.",
+  "action": {
+    "default_title": "Open PinyinCtrlF PDF Viewer"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
   "permissions": [],
   "host_permissions": ["<all_urls>"],
   "content_scripts": [
