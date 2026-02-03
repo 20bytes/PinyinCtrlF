@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/20bytes/PinyinCtrlF#readme",
   "dependencies": {
+    "pdfjs-dist": "^5.4.624",
     "pinyin-pro": "^3.28.0"
   }
 }
