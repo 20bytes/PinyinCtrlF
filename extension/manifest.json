@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "PinyinCtrlF",
+  "version": "0.0.1",
+  "description": "Ctrl+F for Chinese name matching with pinyin/initials.",
+  "permissions": [],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["vendor/pinyin-pro.js", "content.js"]
+    }
+  ]
+}
