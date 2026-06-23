@@ -96,4 +96,4 @@ Chrome 内置 PDF 阅读器是 `chrome-extension://` 页面，扩展无法注入
 
 ## License
 
-[MIT](./LICENSE)
+MIT © 20bytes
