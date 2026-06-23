@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "PinyinCtrlF",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Ctrl+F for Chinese name matching with pinyin/initials.",
   "action": {
     "default_title": "Open PinyinCtrlF PDF Viewer"
